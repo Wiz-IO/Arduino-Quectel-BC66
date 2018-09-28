@@ -34,12 +34,12 @@ http://URL
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino_MT2625_BC66/master/Arduino.jpg)
 
-**INSTALL
 
+**INSTALL
 (Later will make JSON install file)
 
-* Download and istall latest GCC Linaro, Quectel Drivers and Module Flash Uploader
-* Run Flash Uploader and update your module with OpenCPU firmware(URL)
+* Download and install latest GCC Linaro, Quectel Drivers and Module Flash Uploader
+* Run Flash Uploader and update your module with OpenCPU firmware(BC66NAR01A03_OCPU_BETA0426)
 * Copy folder wizio_bc66 to YOUR_INSTALED_PATH\Arduino\hardware\
 * Move/Copy this files to GCC bin folder (this is Sourcery CodeBench files MAKE and RM):
     * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-make.exe
