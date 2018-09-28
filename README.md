@@ -1,4 +1,5 @@
-# Arduino for Quectel BC66 LTE Narow Band modules ( OpenCPU based )
+# Arduino for Quectel BC66 LTE Narow Band modules 
+( OpenCPU based )
 
 **A few words in the beginning**
 * This project not an official product of Quectel / Mediatek
