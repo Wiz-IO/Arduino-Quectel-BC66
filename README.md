@@ -39,7 +39,7 @@ http://URL
 (Later will make JSON install file)
 
 * Download and install latest GCC Linaro, Quectel Drivers and Module Flash Uploader
-https://releases.linaro.org/components/toolchain/gcc-linaro/latest/
+https://releases.linaro.org/components/toolchain/gcc-linaro/latest/gcc-linaro-7.3-2018.05.tar.xz
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * Run Flash Uploader and update your module with OpenCPU firmware(BC66NAR01A03_OCPU_BETA0426)
 * Copy folder wizio_bc66 to YOUR_INSTALED_PATH\Arduino\hardware\
