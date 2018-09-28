@@ -1,0 +1,70 @@
+# WizIO 2018 Georgi Angelov
+# https://github.com/Wiz-IO/Arduino-MT2625-BC66/blob/master/README.md
+# the.wizarda@gmail.com
+#
+# Arduino Core and platform.
+# For more info:
+# https:\\github.com\arduino\Arduino\wiki\Arduino-IDE-1.5---3rd-party-Hardware-specification
+
+name=WizIO
+version=1.0.0
+
+compiler.path={build.compiler_path}
+compiler.c.cmd=arm-eabi-gcc
+compiler.cpp.cmd=arm-eabi-g++
+compiler.c.elf.cmd=arm-eabi-g++
+compiler.ar.cmd=arm-eabi-ar
+compiler.objcopy.cmd=arm-eabi-objcopy
+compiler.size.cmd=arm-eabi-size
+
+compiler.lib.api_ex=
+
+compiler.gcc.c.flags="-I{build.core.path}/interface/" "-I{build.core.path}/interface/opencpu/" "-I{build.core.path}/interface/api_ex/" -Os -Wall -g -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections
+
+compiler.S.flags=-x assembler-with-cpp
+
+compiler.c.flags=-std=gnu11 -Wstrict-prototypes -Wno-pointer-sign
+
+compiler.cpp.flags=-std=c++11 -fvisibility=hidden -Wno-write-strings -fno-exceptions -fno-non-call-exceptions -fno-rtti
+
+compiler.c.elf.flags=-nostartfiles -nodefaultlibs -fno-use-cxa-atexit -Xlinker --gc-sections -Rbuild -Xlinker
+
+compiler.ar.flags=rcs
+
+compiler.objcopy.remove.flags=--strip-debug
+
+compiler.objcopy.bin.flags=-O binary
+
+###### Compile S files
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {build.mcu} {compiler.S.flags} {compiler.c.flags} {includes} "{source_file}" -o "{object_file}"
+
+###### C Compile files
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {build.mcu} {compiler.c.flags} {build.extra_flags} {compiler.gcc.c.flags} {includes} "{source_file}" -c -o "{object_file}" 
+
+###### CPP Compile files
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {build.mcu} {compiler.cpp.flags} {build.extra_flags} {compiler.gcc.c.flags} {includes} "{source_file}" -c -o "{object_file}"
+
+###### AR Create archives
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}" 
+
+###### ELF Combine gc-sections, archives, and objects
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {build.mcu} {compiler.c.elf.flags} "-T{build.core.path}\interface\linkscript.ld" -o "{build.path}/{build.project_name}.elf" "-L{build.path}" -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--start-group "{build.path}/{archive_file}" {object_files} "{build.core.path}/interface/lib_app_start.a" {compiler.lib.api_ex} -Wl,--end-group
+
+###### Create BIN
+recipe.objcopy.bin.1.pattern="{compiler.path}{compiler.objcopy.cmd}" -g -R .comment "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.dat"
+recipe.objcopy.bin.2.pattern="{compiler.path}{compiler.objcopy.cmd}" -O binary "{build.path}/{build.project_name}.dat" "{build.system.path}/APPGS3MDM32A01.bin"
+recipe.objcopy.bin.3.pattern="{compiler.path}{compiler.objcopy.cmd}" -O binary "{build.path}/{build.project_name}.dat" "{build.path}/APPGS3MDM32A01.bin"
+
+file_1="{build.system.path}\app_image_bin.cfg"
+file_2="{build.path}\app_image_bin.cfg"
+###### Add header to BIN
+recipe.objcopy.hex.cmd.windows=gfh.bat
+recipe.objcopy.hex.1.pattern="{build.system.path}/GFH_Generator.exe" "{build.path}/APPGS3MDM32A01.bin"
+recipe.objcopy.hex.2.pattern="{build.system.path}/GFH_Generator.exe" "{build.system.path}/APPGS3MDM32A01.bin"
+recipe.objcopy.hex.3.pattern=cmd /C copy /y  {file_1} {file_2}
+
+###### Compute size
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.iram0\.text|\.iram0\.vectors|\.dram0\.data|\.flash\.text|\.flash\.rodata|)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.dram0\.data|\.dram0\.bss|\.noinit)\s+([0-9]+).*
+
