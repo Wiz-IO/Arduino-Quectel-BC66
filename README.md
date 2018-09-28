@@ -36,7 +36,8 @@ http://URL
 
 
 
-##INSTALL
+
+## Install
 
 (Later will make JSON install file)
 
