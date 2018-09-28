@@ -28,7 +28,7 @@ https://www.quectel.com/product/bc66.htm
 * Arduino IDE (Windows for now)
 https://www.arduino.cc/
 * GCC Linaro - download last version
-https://releases.linaro.org/components/toolchain/gcc-linaro/latest/
+https://releases.linaro.org/components/toolchain/binaries/latest/arm-eabi/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 http://URL
 
@@ -41,19 +41,19 @@ http://URL
 (Later will make JSON install file)
 
 * Download and install latest GCC Linaro, Quectel Drivers and Module Flash Uploader
-https://releases.linaro.org/components/toolchain/gcc-linaro/latest/gcc-linaro-7.3-2018.05.tar.xz
+https://releases.linaro.org/components/toolchain/binaries/latest/arm-eabi/
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * Run Flash Uploader and update your module with OpenCPU firmware(BC66NAR01A03_OCPU_BETA0426)
 * Copy folder wizio_bc66 to YOUR_INSTALED_PATH\Arduino\hardware\
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
 * Move/Copy this files to GCC bin folder (this is Sourcery CodeBench files MAKE and RM):
     * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-make.exe
     * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-rm.exe
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)    
 * Open file Arduino\hardware\wizio_bc66\1.0.0\board.txt and edit your GCC path: wizio_BC66.build.compiler_path=D:/Program/ARM/gcc-linaro-arm-eabi/bin/
 * Start Arduino, select board, play, compile... app is APPGS3MDM32A01.bin
 * Run Flash Uploader, select app_image_bin.cfg from Arduino Bulild Folder or from Arduino\hardware\wizio_bc66\1.0.0\system (this is copy) 
 
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)  
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/tool.png)
 
 **If you want to help / support - contact me**
