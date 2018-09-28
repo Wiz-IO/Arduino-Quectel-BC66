@@ -18,7 +18,7 @@ is a high-performance, multi-band NB-IoT module...
 https://www.quectel.com/product/bc66.htm
 * Test Board for the project: BC66-TE-B ( it is shield Arduino, unfortunately... )
 * Module at board BC66NA... is obsolete, will replase BC66NB... and firmvare for NB
-* Firmware & Drivers: http://URL
+* Firmware & Drivers: https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * API: OpenCPU, native C, EAT (Embedded AT) oriented
 * User Application Size: ROM (BIN) 200k, RAM 100k
 
@@ -39,6 +39,8 @@ http://URL
 (Later will make JSON install file)
 
 * Download and install latest GCC Linaro, Quectel Drivers and Module Flash Uploader
+https://releases.linaro.org/components/toolchain/gcc-linaro/latest/
+https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * Run Flash Uploader and update your module with OpenCPU firmware(BC66NAR01A03_OCPU_BETA0426)
 * Copy folder wizio_bc66 to YOUR_INSTALED_PATH\Arduino\hardware\
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
