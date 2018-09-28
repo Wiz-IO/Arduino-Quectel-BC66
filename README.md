@@ -32,7 +32,7 @@ https://releases.linaro.org/components/toolchain/gcc-linaro/latest/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 http://URL
 
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/arduino.png)
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
 
 **INSTALL
@@ -41,14 +41,16 @@ http://URL
 * Download and install latest GCC Linaro, Quectel Drivers and Module Flash Uploader
 * Run Flash Uploader and update your module with OpenCPU firmware(BC66NAR01A03_OCPU_BETA0426)
 * Copy folder wizio_bc66 to YOUR_INSTALED_PATH\Arduino\hardware\
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
 * Move/Copy this files to GCC bin folder (this is Sourcery CodeBench files MAKE and RM):
     * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-make.exe
     * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-rm.exe
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)    
 * Open file Arduino\hardware\wizio_bc66\1.0.0\board.txt and edit your GCC path: wizio_BC66.build.compiler_path=D:/Program/ARM/gcc-linaro-arm-eabi/bin/
 * Start Arduino, select board, play, compile... app is APPGS3MDM32A01.bin
 * Run Flash Uploader, select app_image_bin.cfg from Arduino Bulild Folder or from Arduino\hardware\wizio_bc66\1.0.0\system (this is copy) 
 
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/tool.png)
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/tool.png)
 
 **If you want to help / support - contact me**
 
