@@ -30,7 +30,7 @@ https://www.arduino.cc/
 * GCC Linaro - download last version
 https://releases.linaro.org/components/toolchain/binaries/latest/arm-eabi/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
-http://URL
+https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
