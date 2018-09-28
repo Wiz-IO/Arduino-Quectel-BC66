@@ -48,7 +48,7 @@ http://URL
 * Start Arduino, select board, play, compile... app is APPGS3MDM32A01.bin
 * Run Flash Uploader, select app_image_bin.cfg from Arduino Bulild Folder or from Arduino\hardware\wizio_bc66\1.0.0\system (this is copy) 
 
-
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/tool.png)
 
 **If you want to help / support - contact me**
 
