@@ -32,7 +32,7 @@ https://releases.linaro.org/components/toolchain/gcc-linaro/latest/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 http://URL
 
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino_MT2625_BC66/master/Arduino.jpg)
+![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/arduino.png)
 
 
 **INSTALL
