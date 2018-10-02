@@ -39,25 +39,25 @@
  * Enumeration for GPIO Pins available.
  ***************************************************************************/
 typedef enum{
-    PINNAME_SPI_MISO 	= 0,
-    PINNAME_SPI_MOSI	= 1,
-    PINNAME_SPI_SCLK	= 2,
-    PINNAME_SPI_CS		= 3,
-    PINNAME_NETLIGHT	= 4,
-    PINNAME_RI			= 5,
-    PINNAME_DCD			= 6,
-    PINNAME_CTS_AUX		= 7,
-    PINNAME_RTS_AUX		= 8,
-    PINNAME_GPIO1		= 9,
-    PINNAME_RXD_AUX		=10,
-    PINNAME_TXD_AUX		=11,
-    PINNAME_GPIO2		=12,
-    PINNAME_GPIO3		=13,
-    PINNAME_GPIO4		=14,
-    PINNAME_GPIO5		=15,
-    PINNAME_RXD_DBG		=16,
-    PINNAME_TXD_DBG		=17,
-    PINNAME_END			=18
+    PINNAME_SPI_MISO = 0,
+    PINNAME_SPI_MOSI,
+    PINNAME_SPI_SCLK,
+    PINNAME_SPI_CS,
+    PINNAME_NETLIGHT,
+    PINNAME_RI,
+    PINNAME_DCD,
+    PINNAME_CTS_AUX,
+    PINNAME_RTS_AUX,
+    PINNAME_GPIO1,
+    PINNAME_RXD_AUX,
+    PINNAME_TXD_AUX,
+    PINNAME_GPIO2,
+    PINNAME_GPIO3,
+    PINNAME_GPIO4,
+    PINNAME_GPIO5,
+    PINNAME_RXD_DBG,
+    PINNAME_TXD_DBG,
+    PINNAME_END
 }Enum_PinName;
 
 typedef enum{

@@ -1,3 +1,11 @@
+/*
+ * INO.cpp
+ *  Example
+ *  Created on: 02.10.2018
+ *      Author: Georgi Angelov
+ */
+#include "Arduino.h"
+
 static s32 imeiHandler(char* line, u32 len, void* userdata) {
   if (!userdata)
     return RIL_ATRSP_FAILED;
@@ -15,18 +23,32 @@ void get_imei() {
 
 void setup() {
   LOG("[APP] Georgi Angelov 2018\n");
-  delay(1000); // wait ril
-  get_imei();
-  LOG("[APP] IMEI: %s\n", dev.imei);
+  Serial.begin(115200);
+  pinMode(0, OUTPUT);
+  delay(2000); // wait ril
 
+  get_imei();
+  Serial.print("IMEI    : ");
+  Serial.println(dev.imei);
+  Serial.print("VERSION : ");
+  Serial.println(dev.version);
 }
 
 void loop() {
+  static int led_state = 0;
   int stat;
   if (0 == RIL_NW_GetEGPRSState(&stat)) {
     LOG("[APP] CEREG: %d\n", stat);
   }
+  LOG("[APP] millis: %d mSec\n", millis());
 
-  LOG("[APP] millis: %d\n", millis());
+  Serial.print("SERIAL LOOP: ");
+  Serial.print(seconds());
+  Serial.println(" seconds");
+
+  for (int i = 0; i < 50; i++) {
+    digitalWrite(0, ++led_state ^ 1);
+    delay(50);
+  }
   delay(5000);
 }

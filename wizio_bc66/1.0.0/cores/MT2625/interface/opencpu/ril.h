@@ -34,7 +34,6 @@
 #ifndef __RIL_H__
 #define __RIL_H__
 #include "ql_type.h"
-
 /******************************************************************************
 * Module URC definition
 ******************************************************************************/
@@ -54,7 +53,16 @@ typedef enum {
     URC_NEW_SMS_IND,            // Indication for new short message.
     URC_MODULE_VOLTAGE_IND,     // Indication for abnormal voltage of module supply power.
 	URC_ALARM_RING_IND,		    // Indication for clock alarm
-	URC_SOCKET_RECV_DATA,       // recv data from server
+	URC_SOCKET_RECV_DATA,       // Indication for recv data from server
+	URC_SOCKET_CLOSE,           // Indication for close socket from server
+	URC_LwM2M_RECV_DATA,        // Indication for  recv data from server
+	URC_LwM2M_OBSERVE,          // Indication for recv observe
+	URC_ONENET_EVENT,           // Indication for  Notify the TE of Event
+	URC_ONENET_OBSERVE,         // Indication for  Notify the TE an Observe Request 
+	URC_ONENET_DISCOVER,        // Indication for Notify the TE to Respond the Discover Request
+	URC_ONENET_WRITE,           // Indication for Notify the TE to Respond the Write Request 
+	URC_ONENET_READ,            // Indication fro Notify the TE to Response the Read Request
+	URC_ONENET_EXECUTE,         // Indication for Notify the TE to Response the Execute Request
     URC_SYS_END = 100,
     /*****************************************/
     /* System URC definition end             */
@@ -112,6 +120,54 @@ typedef enum {
     RIL_AT_INVALID_PARAM     = -4,
     RIL_AT_UNINITIALIZED     = -5,
 }Enum_ATSndError;
+
+
+/******************************************************************************
+* Define socekt recv param
+******************************************************************************/
+#define SOCKET_RECV_BUFFER_LENGTH  1200
+typedef struct{
+	u8 recv_buffer[SOCKET_RECV_BUFFER_LENGTH];
+    u8 connectID;
+	s32 recv_length;
+}Socket_Recv_Param_t;
+
+/******************************************************************************
+* Define lwm2m param
+******************************************************************************/
+#define LWM2M_RECV_BUFFER_LENGTH  1200
+typedef struct{
+    bool observe_flag;
+	u32 obj_id;
+	u32 ins_id;
+	u32 res_num;
+	u8* recv_buffer;
+	u32 recv_length;
+}Lwm2m_Urc_Param_t;
+
+/******************************************************************************
+* Define onenet param
+******************************************************************************/
+#define  ONENET_BUFFER_LENGTH  1200//1024
+typedef struct{
+  u32 ref;
+  u32 evtid;
+  u32 exten;
+  u32 ackid;
+  u32 msgid;
+  u32 objid;
+  s32 insid;
+  s32 resid;
+  bool observe_flag;
+  u32 len;
+  u32 flag;
+  u32 index;
+  u32 value_type;
+  u8 buffer[ONENET_BUFFER_LENGTH];
+  u32 remain_lifetime;
+}Onenet_Urc_Param_t;
+
+
 
 
 /******************************************************************************

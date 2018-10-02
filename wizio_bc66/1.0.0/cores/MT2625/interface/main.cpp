@@ -54,19 +54,49 @@ static void adc_callback(Enum_ADCPin adcPin, u32 adcValue, void *user) {
 	adc->value = adcValue;
 }
 
+static s32 versionHandler(char* line, u32 len, void* userdata) {
+	if (!userdata)
+		return RIL_ATRSP_FAILED;
+	char * p = (char*) userdata;
+	if (strstr(line, "Revision:")) {
+		strcpy(p, &line[10]);
+		replaceChar(p, 13, 0);
+		replaceChar(p, 10, 0);
+		//LOG("[VER] %s\n", p);
+	}
+	if (strstr(line, "OK"))
+		return RIL_ATRSP_SUCCESS;
+	if (strstr(line, "ERROR"))
+		return RIL_ATRSP_FAILED;
+	return RIL_ATRSP_CONTINUE; //continue wait
+}
+
+static void getVersion(void) {
+	Ql_RIL_SendATCmd((char*) "ATI\n", 4, versionHandler, &dev.version, 0);
+}
+
 extern "C" void proc_main_task(int taskId) {
 	__libc_init_array();
-	ST_MSG msg;
+
+#if DEBUG_ENABLE>0
+	debug_init();
+#endif
+
 	LOG("[DEV] Arduino Quectel BC66 NB IoT MT2625\n");
+
 	memset(&dev, 0, sizeof(device_t));
 	for (int i = 0; i < URC_STATE_MAX; i++)
 		dev.state[i] = -1;
+
+	ST_MSG msg;
 	while (1) {
 		Ql_OS_GetMessage(&msg);
 		switch (msg.message) {
 		case MSG_ID_RIL_READY:
 			Ql_RIL_Initialize();
-			LOG("[DEV] MSG_ID_RIL_READY\n");
+			LOG("[DEV] MSG_ID_RIL_READY\n")
+			;
+			getVersion();
 			break; // MSG_ID_RIL_READY
 
 		case MSG_ID_URC_INDICATION:
@@ -126,9 +156,8 @@ extern "C" void proc_arduino(int taskId) {
 	setup();
 	while (1) {
 		loop();
-
-		if (event) // whitout delay this app will crash
-			Ql_OS_WaitEvent(event, 1, 10);
+		if (event)
+			Ql_OS_WaitEvent(event, 1, 10); // whitout delay APP will crash
 	}
 }
 
@@ -136,9 +165,8 @@ extern "C" void proc_arduino(int taskId) {
 extern "C" void proc_delay(int taskId) {
 	unsigned int event = Ql_OS_CreateEvent();
 	while (1) {
-		if (event) // whitout delay app will crash
-		{
-			Ql_OS_WaitEvent(event, 1, 10);
+		if (event) {
+			Ql_OS_WaitEvent(event, 1, 10); // whitout delay APP will crash
 			__millis += 10;
 		}
 	}

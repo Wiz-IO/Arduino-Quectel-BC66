@@ -97,6 +97,7 @@ typedef struct{
 	char serial[20];
 	char imei[20];
 	char imsi[20];
+	char version[20];
 	char apn_name[64];
 	char apn_user[64];
 	char apn_pass[64];
@@ -104,6 +105,7 @@ typedef struct{
 extern device_t dev;
 
 #ifndef API_EX
+
 #define	atoi 			Ql_atoi
 #define atof 			Ql_atof
 #define memcmp  		Ql_memcmp
@@ -122,6 +124,9 @@ extern device_t dev;
 #define sprintf  		Ql_sprintf
 #define snprintf  		Ql_snprintf
 #define sscanf  		Ql_sscanf
+
+#define strtok			Ql_strtok
+#define strsep 			Ql_strsep
 #else
 
 #endif

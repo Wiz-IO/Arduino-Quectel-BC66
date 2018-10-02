@@ -52,16 +52,15 @@ recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {build.mcu} {comp
 
 ###### Create BIN
 recipe.objcopy.bin.1.pattern="{compiler.path}{compiler.objcopy.cmd}" -g -R .comment "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.dat"
-recipe.objcopy.bin.2.pattern="{compiler.path}{compiler.objcopy.cmd}" -O binary "{build.path}/{build.project_name}.dat" "{build.system.path}/APPGS3MDM32A01.bin"
-recipe.objcopy.bin.3.pattern="{compiler.path}{compiler.objcopy.cmd}" -O binary "{build.path}/{build.project_name}.dat" "{build.path}/APPGS3MDM32A01.bin"
+recipe.objcopy.bin.2.pattern="{compiler.path}{compiler.objcopy.cmd}" -O binary "{build.path}/{build.project_name}.dat" "{build.path}/APPGS3MDM32A01.bin"
 
+#####
 file_1="{build.system.path}\app_image_bin.cfg"
 file_2="{build.path}\app_image_bin.cfg"
 ###### Add header to BIN
 recipe.objcopy.hex.cmd.windows=gfh.bat
 recipe.objcopy.hex.1.pattern="{build.system.path}/GFH_Generator.exe" "{build.path}/APPGS3MDM32A01.bin"
-recipe.objcopy.hex.2.pattern="{build.system.path}/GFH_Generator.exe" "{build.system.path}/APPGS3MDM32A01.bin"
-recipe.objcopy.hex.3.pattern=cmd /C copy /y  {file_1} {file_2}
+recipe.objcopy.hex.2.pattern=cmd /C copy /y  {file_1} {file_2}
 
 ###### Compute size
 recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"

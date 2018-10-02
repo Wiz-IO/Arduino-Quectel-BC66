@@ -101,7 +101,7 @@ s32 Ql_SPI_Init(u32 chnnlNo, Enum_PinName pinClk, Enum_PinName pinMiso, Enum_Pin
 *                   [In] Clock Phase
 *               clkSpeed:
 *                   [In] just used for hardware SPI,and the parameter can be ignored when using simulation SPI.
-*                        the range of SPI speed is from 125kbps to 10Mbps.
+*                        the range of SPI speed is from 30kbps to 52Mbps.
 * Return:        
 *               QL_RET_OK, this function succeeds.
 *               QL_RET_ERR_PARAM, parameter error.
@@ -115,7 +115,7 @@ s32 Ql_SPI_Init(u32 chnnlNo, Enum_PinName pinClk, Enum_PinName pinMiso, Enum_Pin
                     1,      //spi master/slave select, now only supports master feature.
                     0,      //spi clock polarity, can be 1 or 0;
                     0,      //spi clock phase, can be 1 or 0;
-                    10000,  //spi clock speed, the unit is kHz.
+                    300,  //spi clock speed, the unit is KHz.
                 );
 *****************************************************************/
 s32 Ql_SPI_Config(u32 chnnlNo, bool isHost, bool cpol, bool cpha, u32 clkSpeed);
@@ -139,26 +139,6 @@ s32 Ql_SPI_Config(u32 chnnlNo, bool isHost, bool cpol, bool cpha, u32 clkSpeed);
 *               QL_RET_ERR_CHANNEL_NOT_FOUND, can't found the SPI channel, make sure it is initialized already.
 *****************************************************************/
 s32 Ql_SPI_Write(u32 chnnlNo, u8 * pData, u32 len);
-
-/*****************************************************************
-* Function:     Ql_SPI_Read 
-* 
-* Description:
-*               This function reads data from the specified slave.
-*               
-* Parameters:
-*               chnnlNo:
-*                   [In] SPI channel No, the No is specified by Ql_SPI_Init function.
-*               pBuffer:
-*                   [Out] read buffer of reading from slave.
-*               rdLen:
-*                   [In] Number of bytes to read.
-* Return:        
-*               if no error, return the length of the write data.
-*               QL_RET_ERR_PARAM, parameter error.
-*               QL_RET_ERR_CHANNEL_NOT_FOUND, can't found the SPI channel, make sure it is initialized already.
-*****************************************************************/
-s32 Ql_SPI_Read(u32 chnnlNo, u8 *pBuffer, u32 rdLen);
 
 /*****************************************************************
 * Function:     Ql_SPI_WriteRead 
@@ -210,25 +190,7 @@ s32 Ql_SPI_WriteRead(u32 chnnlNo, u8 *pData, u32 wrtLen, u8 * pBuffer, u32 rdLen
 *               QL_RET_ERR_PARAM, parameter error.
 *               QL_RET_ERR_CHANNEL_NOT_FOUND, can't found the SPI channel, make sure it is initialized already.
 *****************************************************************/
-typedef void (* SPI_CALLBACK)(u8 * pRdBuffer,u32 rdLen);
 
-s32 Ql_SPI_WriteRead_Ex(u32 chnnlNo, u8 *pData, u32 wrtLen, u32 rdLen, SPI_CALLBACK callback_spi);
-
-/*****************************************************************
-* Function:     Ql_SPI_Uninit 
-* 
-* Description:
-*               This function release the SPI pins.
-*               
-* Parameters:
-*               chnnlNo:
-*                   [In] SPI channel No, the No is specified by Ql_SPI_Init function.
-
-* Return:        
-*               if no error return the length of the read data.
-*               QL_RET_ERR_CHANNEL_NOT_FOUND, can't found the SPI channel, make sure it is initialized already.
-*               QL_RET_ERR_ALREADYUNSUBCRIBE, is released already
-*****************************************************************/
 s32 Ql_SPI_Uninit(u32 chnnlNo);
 
 #endif  //__QL_SPI_H__

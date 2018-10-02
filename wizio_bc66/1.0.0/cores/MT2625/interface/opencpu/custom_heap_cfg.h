@@ -34,5 +34,4 @@
 #define __CUSTOM_HEAP_CFG_H__
 
 
-
 #endif //__CUSTOM_HEAP_CFG_H__

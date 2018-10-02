@@ -49,8 +49,12 @@ typedef enum {
 } Enum_DebugMode;
 
 typedef enum{
+    PORTNAME_UART0,
     PORTNAME_UART1,
-	PORTNAME_UART2
+	PORTNAME_UART2,
+	PORTNAME_UART3,
+	PORTNAME_USB1,
+	PORTNAME_USB2
 }Enum_PortName;
 
 /*****************************************************************

@@ -14,7 +14,7 @@ wizio_BC66.build.core=MT2625
 wizio_BC66.build.compiler_path=D:/Program/ARM/gcc-linaro-arm-eabi/bin/
 
 wizio_BC66.build.f_cpu=78000000L
-wizio_BC66.build.mcu=-mcpu=cortex-m4 -mlittle-endian -mfloat-abi=soft -mthumb-interwork
+wizio_BC66.build.mcu=-mcpu=cortex-m4 -mlittle-endian -mthumb-interwork -mfloat-abi=hard -mfpu=fpv4-sp-d16
 wizio_BC66.build.extra_flags=-D__WIZIO_BC66__ -D_DEFAULT_SOURCE
 
 wizio_BC66.upload.tool=

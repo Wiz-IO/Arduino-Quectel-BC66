@@ -36,7 +36,7 @@
 #define __QL_TYPE_H__
 
 #include <stddef.h>
-#include <stdbool.h> // WizIO
+#include <stdbool.h>
 
 #ifndef FALSE
 #define FALSE    0
@@ -54,7 +54,7 @@
 /****************************************************************************
  * Type Definitions
  ***************************************************************************/
-//typedef unsigned char       bool; /*WizIO*/
+//[WizIO] typedef unsigned char       bool;
 typedef unsigned char       u8;
 typedef signed   char       s8;
 typedef unsigned short      u16;

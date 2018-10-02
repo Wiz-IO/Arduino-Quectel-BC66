@@ -54,8 +54,8 @@ static const ST_AppEnable appEnableCfg = {
 };
 
 // powerkey and watchdog function is under evaluation
-#if 0
-static const ST_PowerKeyCfg pwrkeyCfg = {
+//[WizIO]
+const ST_PowerKeyCfg pwrkeyCfg = {
     TRUE,  // working mode for power-on on PWRKEY pin
     /*
     Module automatically powers on when feeding a low level to POWER_KEY pin.
@@ -79,14 +79,14 @@ static const ST_PowerKeyCfg pwrkeyCfg = {
 /*     Customer may specify two GPIOs if needed.                        */
 /************************************************************************/
 static const ST_ExtWatchdogCfg wtdCfg = {
-    PINNAME_END,  // Specify a pin which connects to the external watchdog
-    PINNAME_END   // Specify another pin for watchdog if needed
+    PINNAME_GPIO1,  // Specify a pin which connects to the external watchdog
+    PINNAME_END,   // Specify another pin for watchdog if needed
 };
 ST_ExtWatchdogCfg* Ql_WTD_GetWDIPinCfg(void)
 {
     return (ST_ExtWatchdogCfg*)(&wtdCfg);
 }
-#endif
+
 /************************************************************************/
 /* Define the working mode of serial debug port (UART2).                */
 /*                                                                      */
@@ -97,16 +97,22 @@ ST_ExtWatchdogCfg* Ql_WTD_GetWDIPinCfg(void)
 /* "genie_Operation_UGD" for the usage of debug port                  */
 /* now only supports BASIC MODE*/
 /************************************************************************/
-static const ST_DebugPortCfg debugPortCfg __attribute__((unused)) /*WizIO*/ = {
-      BASIC_MODE      // Set the serial  port  to a common serial port
+static const ST_DebugPortCfg debugPortCfg = {
+     BASIC_MODE      // Set the serial  port  to a common serial port
      //ADVANCE_MODE   // Set the serial  port to a special debug port
 };
 
+static const ST_DebugPortSet debugPortSet = {
+    PORTNAME_UART1,  	// Set the serial debug port (UART2) to GKI log .Can choose UART0/UART1/UART2
+    PORTNAME_UART1      // Set the serial debug port (UART1) to HSL log .Can choose UART0/UART1/UART2
+};
 
 const ST_SystemConfig SystemCfg[] = {
     {SYS_CONFIG_APP_ENABLE_ID,      SYS_CONFIG_APPENABLE_DATA_SIZE,(void*)&appEnableCfg},
-   // {SYS_CONFIG_PWRKEY_DATA_ID,     SYS_CONFIG_PWRKEY_DATA_SIZE,   (void*)&pwrkeyCfg   },
-    //{SYS_CONFIG_WATCHDOG_DATA_ID,   SYS_CONFIG_WATCHDOG_DATA_SIZE, (void*)&wtdCfg      },
-   // {SYS_CONFIG_DEBUG_MODE_ID,      SYS_CONFIG_DEBUGMODE_DATA_SIZE,(void*)&debugPortCfg},
+    //{SYS_CONFIG_PWRKEY_DATA_ID,     SYS_CONFIG_PWRKEY_DATA_SIZE,   (void*)&pwrkeyCfg   },
+    {SYS_CONFIG_WATCHDOG_DATA_ID,   SYS_CONFIG_WATCHDOG_DATA_SIZE, (void*)&wtdCfg      },
+    {SYS_CONFIG_DEBUG_MODE_ID,      SYS_CONFIG_DEBUGMODE_DATA_SIZE,(void*)&debugPortCfg},
+    {SYS_CONFIG_DEBUG_SET_ID,       SYS_CONFIG_DEBUGSET_DATA_SIZE, (void*)&debugPortSet},
     {SYS_CONFIG_END, 0, NULL                                                           }
 };
+

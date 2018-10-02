@@ -43,7 +43,7 @@ typedef struct {
     s32 hour;
     s32 minute;
     s32 second;
-    s32 timezone;  // one digit expresses a quarter of an hour, for example: 22 indicates "+5:30"
+    s32 timezone;  // The range is(-11~12).one digit expresses an hour, for example: 8 indicates "GMT+8"
 }ST_Time;
 
 /*****************************************************************

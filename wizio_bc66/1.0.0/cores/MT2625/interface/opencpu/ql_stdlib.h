@@ -57,4 +57,10 @@ s32   Ql_isdigit(char c);
 extern s32 (*Ql_sprintf)(char *, const char *, ...);
 extern s32 (*Ql_snprintf)(char *, u32, const char *, ...);
 extern s32 (*Ql_sscanf)(const char*, const char*, ...);
+
+//[WizIO]
+char * Ql_strtok(char *s, const char *delim);
+char * Ql_strsep(char **stringp, const char *delim);
+void replaceChar(char * str, char _old, char _new);
+
 #endif  // __QL_STDLIB_H__

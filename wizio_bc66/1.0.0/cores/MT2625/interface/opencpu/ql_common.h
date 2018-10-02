@@ -43,13 +43,14 @@
 #define  SYS_CONFIG_WATCHDOG_DATA_SIZE  (8)
 #define  SYS_CONFIG_APPENABLE_DATA_SIZE (4)
 #define  SYS_CONFIG_DEBUGMODE_DATA_SIZE (4)
-
+#define  SYS_CONFIG_DEBUGSET_DATA_SIZE  (8)
 
 typedef enum{
     SYS_CONFIG_PWRKEY_DATA_ID,      // For PWRKEY pin setting
     SYS_CONFIG_WATCHDOG_DATA_ID,    // For external watchdog setting
     SYS_CONFIG_APP_ENABLE_ID,       // For application enable setting
-    SYS_CONFIG_DEBUG_MODE_ID,       // For serial mode setting    
+    SYS_CONFIG_DEBUG_MODE_ID,       // For serial mode setting  
+    SYS_CONFIG_DEBUG_SET_ID,        //For  genie log port setting
     SYS_CONFIG_END = 0x7FFFFFFF
 }Enum_SysCfgId;
 
@@ -84,6 +85,10 @@ typedef struct{
     Enum_DebugMode dbgPortMode;
 }ST_DebugPortCfg;
 
+typedef struct{
+    Enum_PortName dbgPort_gki;
+    Enum_PortName dbgPort_hsl;
+}ST_DebugPortSet;
 /****************************************************************************
  * Customized configuration structure
  ***************************************************************************/
@@ -96,7 +101,7 @@ typedef struct{
 #define QL_TRACE_LOG(PORT,BUF,BUF_LEN,...) \
     Ql_memset((char *)(BUF), 0, BUF_LEN); \
     Ql_sprintf((char *)(BUF),__VA_ARGS__); \
-    if (UART_PORT2 == (PORT)) \
+    if (UART_PORT1 == (PORT)) \
     {\
         Ql_Debug_Trace(BUF);\
     } else {\

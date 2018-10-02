@@ -395,6 +395,71 @@ u32 Ql_OS_GetCurrenTaskLeftStackSize(void);
 *****************************************************************/
 s32 Ql_OS_GetActiveTaskId(void);
 
+
+/*****************************************************************
+* Function:     Ql_SecureData_Store 
+* 
+* Description:
+*              This function can be used to store some critical user data 
+*              to prevent them from losing.
+*
+*              Note:
+*              1.
+*              OpenCPU has designed 2 blocks of system storage space to 
+*              backup critical user data. Developer may specify the first
+*              parameter index [1-2] to specify different storage block. 
+*              each blocks can store 50 bytes 
+*              2.
+*              User should not call this API function frequently, which is not
+*              good for life cycle of flash.
+*
+* Parameters:
+*              index:
+*               [in]  the index of the secure data block. The range is: 1~2.
+*              
+*               pData: 
+*                   [in] The data to be backed up. In 1~2 groups, every group can 
+*                   save 50 bytes at most. 
+*
+*               len:
+*                   [in] The length of the user data. The maximum of this value is 50.
+* Return:       
+*               QL_RET_OK, this function succeeds.
+*             -1:An unknown error occurred,may be parameter is error.
+*             -2:The NVDM found a checksum error when reading the data item
+*             -3:No space is available in the flash
+*             -4: The data item wasn't found by the NVDM.
+              -5:The user parameter is invalid.
+*               ......
+*****************************************************************/
+s32 Ql_SecureData_Store(u8 index , u8* pData, u32 len);
+
+/*****************************************************************
+* Function:     Ql_SecureData_Read 
+* 
+* Description:
+*              This functin reads secure data which is previously 
+*              stored by Ql_SecureData_Store.
+* Parameters:
+*               index:
+*                   [in] The index of the secure data block. The range is: 1~2.
+*
+*               len:
+*                   [in] The length of the user data. The maximum of this value is 50.
+* Return:       
+*               QL_RET_OK, this function succeeds.
+*             -1:An unknown error occurred,may be parameter is error.
+*             -2:The NVDM found a checksum error when reading the data item
+*             -3:No space is available in the flash
+*             -4: The data item wasn't found by the NVDM.
+              -5:The user parameter is invalid.
+
+*****************************************************************/
+s32 Ql_SecureData_Read(u8 index, u8* pBuffer, u32 len);
+
+
+
+/********************************TASK DEFINITION*************************************************/
 #ifdef TASK_ENTRYFUNC_DEF
 #undef TASK_ENTRYFUNC_DEF
 #endif

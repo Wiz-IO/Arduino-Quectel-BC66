@@ -37,6 +37,7 @@ PinDescription pinsMap[] = {
 		{ 3, PINNAME_SPI_SCLK, M_FREE, F_GPIO | F_SPI },
 		{ 4, PINNAME_SPI_CS, M_FREE, F_GPIO | F_SPI },
 		{ 0, PIN_ADC0, M_ADC, F_ADC },
+		// other pins
 };
 
 #define ARRAYLEN(x) (sizeof(x) / sizeof((x)[0]))

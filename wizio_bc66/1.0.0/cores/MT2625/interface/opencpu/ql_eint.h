@@ -39,10 +39,11 @@
 
 
 typedef enum{
-    EINT_LEVEL_TRIGGERED     = 0,            /**< Level and low  or rising trigger. */
-    EINT_EDGE_FALLING  = 1,                  /**< Edge and falling trigger. */
-    EINT_EDGE_RISING   = 2,                  /**< Edge and rising trigger. */
-    EINT_EDGE_FALLING_AND_RISING = 3,        /**< Edge and falling or rising trigger. */
+    EINT_LEVEL_LOW     = 0,                 /**< Level and low trigger. */
+    EINT_LEVEL_HIGH    = 1,                 /**< Level and high trigger. */
+    EINT_EDGE_FALLING  = 2,                 /**< Edge and falling trigger. */
+    EINT_EDGE_RISING   = 3,                 /**< Edge and rising trigger. */
+    EINT_EDGE_FALLING_AND_RISING = 4,        /**< Edge and falling or rising trigger. */
     END_OF_HAL_EINT
 }Enum_EintType;
 
@@ -98,8 +99,7 @@ s32 Ql_EINT_Register(Enum_PinName eintPinName, Callback_EINT_Handle callback_ein
 *               This function registers an EINT I/O, and specifies the
 *               interrupt handler. 
 *               The EINT, that is registered by calling this function,
-*               is a lower-level interrupt. The response for interrupt
-*               request is timelier.
+*               The response for interrupt request is timelier.
 *
 *               IMPORTANT NOTES:
 *               Please don't add any task schedule in the interrupt
@@ -138,13 +138,14 @@ s32 Ql_EINT_RegisterFast(Enum_PinName eintPinName, Callback_EINT_Handle callback
 *
 *               eintType:
 *                   Interrupt type, level-triggered or edge-triggered.
-*                   Now, only level-triggered interrupt is supported.
 *
 *               hwDebounce:
-*                   Hardware debounce. Unit in ms. 
+*                   Hardware debounce. Unit in 10ms. 
 *
 *               swDebounce:
-*                   Software debounce. Currently only support hw debounce
+*                   Software debounce. Unit in 10ms. The minimum value for 
+*                   this parameter is 5, which means the minimum software
+*                   debounce time is 5*10ms=50ms.
 *		   automask:
 *	              mask the Eint after the interrupt happened.
 * Return:        

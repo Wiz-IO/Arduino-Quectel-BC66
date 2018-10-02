@@ -33,6 +33,17 @@
 #ifndef __QL_IIC_H__
 #define __QL_IIC_H__
 
+/** @brief This enum defines the I2C transaction speed.  */
+typedef enum {
+    I2C_FREQUENCY_50K  = 0,          /**<  50kbps. */
+    I2C_FREQUENCY_100K = 1,          /**<  100kbps. */
+    I2C_FREQUENCY_200K = 2,          /**<  200kbps. */
+    I2C_FREQUENCY_300K = 3,          /**<  300kbps. */
+    I2C_FREQUENCY_400K = 4,          /**<  400kbps. */
+    I2C_FREQUENCY_1M   = 5,          /**<  1mbps. */
+    I2C_FREQUENCY_MAX                /**<  The total number of supported I2C frequencies (invalid I2C frequency).*/
+} hal_i2c_frequency_t;
+
 
 /*****************************************************************
 * Function:     Ql_IIC_Init 
@@ -80,8 +91,7 @@ s32 Ql_IIC_Init(u32 chnnlNo, Enum_PinName pinSCL, Enum_PinName pinSDA, bool IICt
 *                   [In] slave address.
 *		        IicSpeed:
 *		            [In] just used for hardware IIC,and the parameter can be ignored when using simulation IIC.
-*                        For hardware IIC, It supports fast mode and high speed mode. the speed of fast speed mode
-*                        is less than 400 kbps, and the speed of high speed mode is [400..3400] kbps. 
+*               
 *
 * Return:        
 *               QL_RET_OK, this function succeeds.

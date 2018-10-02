@@ -47,7 +47,7 @@ static s32 m_iErrCode = 0; // Is used to record the specific error code
 s32 Ql_RIL_AT_GetErrCode(void) {return m_iErrCode;}
 //
 // Developer can call this API to set the error code when resolving the response for AT.
-void Ql_RIL_AT_SetErrCode(s32 errCode) {m_iErrCode = errCode;}
+s32 Ql_RIL_AT_SetErrCode(s32 errCode) {m_iErrCode = errCode; return errCode; }
 
 /******************************************************************************
 * Function:     Default_atRsp_callback
@@ -85,7 +85,8 @@ s32 Default_atRsp_callback(char* line, u32 len, void* userdata)
         return  RIL_ATRSP_FAILED;
     }
     else if (Ql_RIL_FindString(line, len, "+CME ERROR:") || 
-              Ql_RIL_FindString(line, len, "+CMS ERROR:"))
+              Ql_RIL_FindString(line, len, "+CMS ERROR:") ||
+              Ql_RIL_FindString(line, len, "+CIS ERROR:"))
     {
         Ql_sscanf(line, "%*[^:]: %d\r\n", &m_iErrCode);
         return  RIL_ATRSP_FAILED;

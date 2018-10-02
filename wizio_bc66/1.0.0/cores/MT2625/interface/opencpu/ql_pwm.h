@@ -59,7 +59,7 @@ typedef enum{
 *                   you must invoke Ql_PWM_Output function to control PWM waveform on or off
 * Parameters:
 *               pinName:
-*                   Pin name, only can be PINNAME_NETLIGHT.
+*                   Pin name, support three pwm channels, can PINNAME_NETLIGHT/PINNAME_RTS_AUX/PINNAME_GPIO3.
 *               pwmSrcClk:
 *                   PWM source clock , one value of Enum_PwmSource.
 *               pwmDiv:
@@ -88,7 +88,7 @@ s32 Ql_PWM_Init(Enum_PinName pwmPinName,Enum_PwmSource pwmSrcClk,Enum_PwmSourceD
 *
 * Parameters:
 *               pinName:
-*                   Pin name, only can be PINNAME_NETLIGHT.
+*                   Pin name, support three pwm channels, can PINNAME_NETLIGHT/PINNAME_RTS_AUX/PINNAME_GPIO3.
 * Return:        
 *               QL_RET_OK, this function succeeds.
 *               QL_RET_ERR_NOSUPPORTPIN, the input pin is invalid. 
@@ -103,7 +103,7 @@ s32 Ql_PWM_Uninit(Enum_PinName pwmPinName);
 *
 * Parameters:
 *               pinName:
-*                   Pin name, only can be PINNAME_NETLIGHT.
+*                   Pin name, support three pwm channels, can PINNAME_NETLIGHT/PINNAME_RTS_AUX/PINNAME_GPIO3.
 *               pwmOnOff:
 *                   PWM enable. control the PWM waveform output or not output.
 *
