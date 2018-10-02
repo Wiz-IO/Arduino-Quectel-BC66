@@ -54,6 +54,7 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * Open file Arduino\hardware\wizio_bc66\1.0.0\board.txt and edit your instaled GCC path: wizio_BC66.build.compiler_path=D:/Program/ARM/gcc-linaro-arm-eabi/bin/
 * Start Arduino, select board, play, compile... APP is APPGS3MDM32A01.bin ( look in Arduino Bulild Folder )
 * Run Flash Uploader, select app_image_bin.cfg from Arduino Bulild Folder
+* NOTE: You may have problems with Admin rights of Arduino folder on Windows 8/10
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)  
