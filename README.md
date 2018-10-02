@@ -59,6 +59,12 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)  
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/tool.png)
 
+TODO:
+* add SPI
+* add I2S
+* add all gpio-s
+* debug
+
 **If you want to help / support - contact me**
 
 # Other - Comming soon....
