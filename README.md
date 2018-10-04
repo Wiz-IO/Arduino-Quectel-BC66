@@ -44,11 +44,8 @@ http://46.233.13.100/arduino/bc66/package_wizio.bc66_0_index.json
 http://wizio.eu//arduino/bc66/package_wizio.bc66_0_index.json
 * Open Borad Manager, Find WizIO, Install, Select board, Click [Compile] or [Upload]
 
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)  
-![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/tool.png)
 
-Thanks to: 
+** Thanks to: **
 * Radu Igret for terminal uploader
 
 TODO:
