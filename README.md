@@ -46,7 +46,9 @@ http://wizio.eu//arduino/bc66/package_wizio.bc66_0_index.json
 
 
 ** Thanks to: **
+
 * Radu Igret for terminal uploader
+
 
 TODO:
 * add SPI
