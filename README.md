@@ -37,8 +37,10 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 **Install**
 
 * Add json link to Arduino - Preferences (link is temporary, next will be)
+
 http://46.233.13.100/arduino/bc66/package_wizio.bc66_0_index.json 
 * Add json link to Arduino - Preferences 
+
 http://wizio.eu//arduino/bc66/package_wizio.bc66_0_index.json
 * Open Borad Manager, Find WizIO, Install, Select board, Click [Compile] or [Upload]
 
