@@ -7,7 +7,7 @@
 * Quectel modules BC66NA will not be supported, your module must be marked as BC66NB-
 * The full/exended port will make later, this will be start base
 * License: Free for all
-* This version: 1.0.1
+* This compile version: 1.0.3
 
 
 **Chipset Mediatek MT2625 SoC**
