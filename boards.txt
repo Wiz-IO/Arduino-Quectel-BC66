@@ -1,0 +1,67 @@
+# WizIO 2018 Georgi Angelov
+# https://github.com/Wiz-IO/Arduino-Quectel-BC66
+# the.wizarda@gmail.com
+#
+# Arduino Core and platform.
+# For more info:
+# https:\\github.com\arduino\Arduino\wiki\Arduino-IDE-1.5---3rd-party-Hardware-specification
+
+
+### BC66NB Modules
+BC66NB.build.variant=BC66NB-TE-B
+BC66NB.name=Quectel BC66NB-TE-B
+BC66NB.build.board=Quectel BC66NB-TE-B
+BC66NB.build.core=MT2625_NB
+BC66NB.build.compiler_path={runtime.tools.bc66_gcc.path}\bin\
+BC66NB.build.f_cpu=78000000L
+BC66NB.build.mcu=-mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -mlittle-endian -mthumb -mthumb-interwork 
+BC66NB.build.extra_flags=-D_DEFAULT_SOURCE -DMT2625 -D__OCPU_COMPILER_GCC__
+BC66NB.build.api_ex=
+BC66NB.upload.maximum_size=200000
+BC66NB.upload.maximum_data_size=100000
+BC66NB.upload.tool=bc66_uploader
+BC66NB.upload.protocol=quectel
+BC66NB.upload.use_1200bps_touch=false
+BC66NB.upload.wait_for_upload_port=false
+BC66NB.upload.native_usb=false
+BC66NB.upload.via_ssh=false
+
+
+### BC66NB Modules EXTENDED API ver R01A04V01
+BC66NB_R01A04V01.build.variant=BC66NB-TE-B
+BC66NB_R01A04V01.name=Quectel BC66NB-TE-B < R01A04V01 >
+BC66NB_R01A04V01.build.board=Quectel BC66NB-TE-B < R01A04V01 >
+BC66NB_R01A04V01.build.core=MT2625_NB_API_R01A04V01
+BC66NB_R01A04V01.build.compiler_path={runtime.tools.bc66_gcc.path}\bin\
+BC66NB_R01A04V01.build.f_cpu=78000000L
+BC66NB_R01A04V01.build.mcu=-mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant -mlittle-endian -mthumb -mthumb-interwork 
+BC66NB_R01A04V01.build.extra_flags=-D_DEFAULT_SOURCE -DMT2625 -D__OCPU_COMPILER_GCC__
+BC66NB_R01A04V01.build.api_ex=
+BC66NB_R01A04V01.upload.maximum_size=200000
+BC66NB_R01A04V01.upload.maximum_data_size=100000
+BC66NB_R01A04V01.upload.tool=bc66_uploader
+BC66NB_R01A04V01.upload.protocol=quectel
+BC66NB_R01A04V01.upload.use_1200bps_touch=false
+BC66NB_R01A04V01.upload.wait_for_upload_port=false
+BC66NB_R01A04V01.upload.native_usb=false
+BC66NB_R01A04V01.upload.via_ssh=false
+
+
+### BC66NA Modules
+BC66NA.build.variant=BC66NA-TE-B
+BC66NA.name=Quectel BC66NA-TE-B
+BC66NA.build.board=Quectel BC66NA-TE-B
+BC66NA.build.core=MT2625_NA
+BC66NA.build.compiler_path={runtime.tools.bc66_gcc.path}\bin\
+BC66NA.build.f_cpu=78000000L
+BC66NA.build.mcu=-mcpu=cortex-m4 -mfloat-abi=soft -fsingle-precision-constant -mlittle-endian -mthumb -mthumb-interwork 
+BC66NA.build.extra_flags=-D_DEFAULT_SOURCE -DMT2625 -D__OCPU_COMPILER_GCC__
+BC66NA.build.api_ex=
+BC66NA.upload.maximum_size=200000
+BC66NA.upload.maximum_data_size=100000
+BC66NA.upload.tool=bc66_uploader
+BC66NA.upload.protocol=quectel
+BC66NA.upload.use_1200bps_touch=false
+BC66NA.upload.wait_for_upload_port=false
+BC66NA.upload.native_usb=false
+BC66NA.upload.via_ssh=false

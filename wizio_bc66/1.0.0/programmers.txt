@@ -1,6 +1,0 @@
-# WizIO 2018 Georgi Angelov
-# https://github.com/Wiz-IO/Arduino-MT2625-BC66/blob/master/README.md
-# the.wizarda@gmail.com
-
-wiziofirmware.name=WizIO - Quectel IoT Flash Tool
-wiziofirmware.program.tool=

@@ -20,7 +20,6 @@ is a high-performance, multi-band NB-IoT module...
 https://www.quectel.com/product/bc66.htm
 * Test Board for the project: BC66-TE-B ( it is shield Arduino, unfortunately... )
 * Modules BC66NA... is obsolete, replace with BC66NB... and firmware for NB
-* Firmware & Drivers: https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * API: OpenCPU, native C, EAT (Embedded AT) oriented
 * User Application Size: ROM (BIN) 200k, RAM 100k
 
@@ -29,42 +28,33 @@ https://www.quectel.com/product/bc66.htm
 **Tools**
 * Arduino IDE (Windows for now)
 https://www.arduino.cc/
-* GCC Linaro - download last version
-https://releases.linaro.org/components/toolchain/binaries/latest/arm-eabi/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
 
+**Install**
 
-
-## Install
-
-(Later will make JSON install file)
-
-* Download and install latest GCC Linaro, Quectel Drivers and Module Flash Uploader
-https://releases.linaro.org/components/toolchain/binaries/latest/arm-eabi/
-https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
-* Run Flash Uploader and update your module with OpenCPU firmware( BC66NBR01A04V01 )
-* Copy folder wizio_bc66 to YOUR_INSTALED_PATH\Arduino\hardware\
-* Move/Copy this files to GCC bin folder (this is Sourcery CodeBench files MAKE and RM):
-    * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-make.exe
-    * from Arduino\hardware\wizio_bc66\1.0.0\system\cs-rm.exe
-* Open file Arduino\hardware\wizio_bc66\1.0.0\board.txt and edit your instaled GCC path: wizio_BC66.build.compiler_path=D:/Program/ARM/gcc-linaro-arm-eabi/bin/
-* Start Arduino, select board, play, compile... APP is APPGS3MDM32A01.bin ( look in Arduino Bulild Folder )
-* Run Flash Uploader, select app_image_bin.cfg from Arduino Bulild Folder
-* NOTE: You may have problems with Admin rights of Arduino folder on Windows 8/10
+* Add json link to Arduino - Preferences (link is temporary, next will be)
+http://46.233.13.100/arduino/bc66/package_wizio.bc66_0_index.json 
+* Add json link to Arduino - Preferences 
+http://wizio.eu//arduino/bc66/package_wizio.bc66_0_index.json
+* Open Borad Manager, Find WizIO, Install, Select board, Click [Compile] or [Upload]
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino_hardware.png)
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/gcc_bin.png)  
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/tool.png)
 
+Thanks to: 
+* Radu Igret for terminal uploader
+
 TODO:
 * add SPI
 * add I2S
 * add all gpio-s
-* debug
+* debug and other stufs
+
 
 **If you want to help / support - contact me**
 
