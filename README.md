@@ -45,7 +45,7 @@ http://wizio.eu//arduino/bc66/package_wizio.bc66_0_index.json
 * Open Borad Manager, Find WizIO, Install, Select board, Click [Compile] or [Upload]
 
 
-** Thanks to: **
+**Thanks to**
 
 * Radu Igret for terminal uploader
 
