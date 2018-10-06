@@ -54,12 +54,15 @@ TODO:
 * add all gpio-s
 * debug and other stufs
 * Arduino + Extended API gives you tremendous opportunities for LTE Narrow Band
+
 The extended API is dependent on firmware version.
-The API support direct calls to the core as FreeRTOS, lvip, mbedtls, http, mqtt... etc
-API is selected as board model in Arduino Menu - Boards Manager
+The API support direct calls to the core as FreeRTOS, lvip, mbedtls, http, mqtt...etc.
+API is selected as board model in Arduino Menu - Boards Manager.
+
 Example: Quectel BC66NB-TE-B < R01A04V01 >
-This api/board is dependent with firmware BC66NBR01A04V01 and module must be updated with this version
-API has soft protection of not correct versions
+
+This api/board is dependent with firmware BC66NBR01A04V01 and module must be updated with this version.
+API has soft protection of not correct versions.
 Is in development... I need a few free days to add base...
 
 
