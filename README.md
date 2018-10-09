@@ -36,7 +36,7 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 **ATTENTION: Before start exeriments:**
 * Update firmware version
 * Make Backup of NVDM Fields (module "eeprom")
-* IoT Tool, [Backup] button, check-box "Backup", select file for backup (use IMEI as name), [Start] and keepthe file
+* IoT Tool, [Backup] button, check-box "Backup", select file for backup (use IMEI as name), [Start] and keep the file
 * Now you can start all and you can restore the module if need
 * Note: if you upload application to module you lose standart AT command via uarts (with backup file you can restore this)
 
