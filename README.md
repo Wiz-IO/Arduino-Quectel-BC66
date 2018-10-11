@@ -33,6 +33,35 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
+TCP Client example log
+```
+Leaving the BROM
+[DBG] READY
+[DEV] Quectel EXTENDED API BC66NBR01A04
+[DBG] CPU Frequency: 78000000 Hz
+[ARDUINO] Begin
+[DEV] MSG_ID_RIL_READY
+[APP] Socket Example
+[IMEI] 867997030026503
+[BAND] AT+QBAND=1,3, rc = 0
+[RIL] MSG_ID_URC_INDICATION: 2, 1
+[RIL] MSG_ID_URC_INDICATION: 5, 2
+[RIL] MSG_ID_URC_INDICATION: 5, 1
+[APP] Narrow Band Level: -89,
+[APP] DNS wizio.eu = 193.107.36.200
+[SOC] Conecting...
+[SOC] Conected: 0
+HTTP/1.1 200 OK
+Date: Thu, 11 Oct 2018 10:39:18 GMT
+Server: Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.6.26
+X-Powered-By: PHP/5.6.26
+Content-Length: 37
+Content-Type: text/html; charset=UTF-8
+[APACHE] Hello World ( 2018/10/11 )
+[SOC] Close
+[APP] waithing...
+```
+
 **ATTENTION: Before start exeriments:**
 * Update firmware version
 * Make Backup of NVDM Fields (module "eeprom")
