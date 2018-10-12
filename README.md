@@ -30,6 +30,8 @@ https://www.quectel.com/product/bc66.htm
 https://www.arduino.cc/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
+* MQTT test monitor 
+http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
