@@ -62,6 +62,14 @@ Content-Type: text/html; charset=UTF-8
 [APACHE] Hello World ( 2018/10/11 )
 [SOC] Close
 [APP] waithing...
+......
+Test Result...
+LTE Narrow Band 3 (1800 MHz)
+LWIP Socket, HTTP-GET
+180 minutes, 180 packets (240 bytes), 1 minute interval
+RX: -95 dBm, 1814.31 MHz 
+TX: +21 dBm, 1723.08 MHz
+PACKET LOST: 0
 ```
 
 **ATTENTION: Before start exeriments:**
