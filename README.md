@@ -5,6 +5,7 @@
 * This project not an official product of Quectel / Mediatek
 * The project is based on Quectel OpenCPU and port must be work on all NB modules
 * Quectel modules BC66NA will not be supported, your module must be marked as BC66NB-
+* Quectel BC26 should work ( with small modifications maybe, I do not have a module for experiments )
 * The full/exended port will make later, this will be start base
 * License: Free for all
 * This compile version: 1.0.3
