@@ -88,7 +88,7 @@ PACKET LOST: 0
 
 http://wizio.eu//arduino/bc66/package_wizio.bc66_index.json
 
-* Open Borad Manager, Find WizIO, Install, Select board, Click [Compile] or [Upload]
+* Open Borad Manager, Find WizIO, Install OR Update, Select board, Click [Compile] or [Upload]
 
 
 **Thanks to**
@@ -101,7 +101,9 @@ TODO:
 * add I2S
 * add all gpio-s
 * debug and other stufs
-* Arduino + Extended API gives you tremendous opportunities for LTE Narrow Band
+
+
+Arduino + Extended API gives you tremendous opportunities for LTE Narrow Band
 
 The extended API is dependent on firmware version.
 The API support direct calls to the core as FreeRTOS, lvip, mbedtls, http, mqtt...etc.
@@ -111,7 +113,8 @@ Example: Quectel BC66NB-TE-B < R01A04V01 >
 
 This api/board is dependent with firmware BC66NBR01A04V01 and module must be updated with this version.
 API has soft protection of not correct versions.
-Is in development... I need a few free days to add base...
+
+Example: Simple MQTT, source from there, folder examples
 
 
 
