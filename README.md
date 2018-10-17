@@ -57,7 +57,7 @@ MQTT Client example log
 [API] MQTTDisconnect()
 [API] Waithing...
 ```
-result is there: http://quectel.slimfitdesign.com/nb-iot/mqtt/
+result is there: http://quectel.slimfitdesign.com/nb-iot/mqtt/ 
 
 **ATTENTION: Before start exeriments:**
 * Update firmware version
