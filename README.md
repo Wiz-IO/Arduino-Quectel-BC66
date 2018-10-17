@@ -8,7 +8,8 @@
 * Quectel BC26 should work ( with small modifications maybe, I do not have a module for experiments )
 * The full/exended port will make later, this will be start base
 * License: Free for all
-* This compile version: 1.0.3
+* This compile version: 1.0.4
+* Added Extended API
 
 
 **Chipset Mediatek MT2625 SoC**

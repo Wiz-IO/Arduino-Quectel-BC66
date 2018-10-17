@@ -18,7 +18,7 @@ compiler.objcopy.cmd=arm-none-eabi-objcopy
 compiler.size.cmd=arm-none-eabi-size
 
 
-compiler.gcc.c.flags=-Os -Wall -g -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections "-I{runtime.tools.bc66_gcc.path}\arm-none-eabi\include" "-I{build.core.path}\interface\" "-I{build.core.path}\interface\opencpu\" "-I{build.core.path}\interface\api_ex\"
+compiler.gcc.c.flags=-Os -Wall -g -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections "-I{runtime.tools.bc66_gcc.path}\arm-none-eabi\include" "-I{build.core.path}\interface\" "-I{build.core.path}\interface\opencpu\" "-I{build.core.path}\interface\api_ex\" "-I{build.core.path}\interface\api_ex\include\"
 
 compiler.S.flags=-x assembler-with-cpp
 
@@ -72,4 +72,5 @@ tools.bc66_uploader.cmd.windows=coda.exe
 tools.bc66_uploader.path={runtime.tools.bc66_tools.path}
 tools.bc66_uploader.upload.params.verbose=-vvvvvv
 tools.bc66_uploader.upload.params.quiet=-q
-tools.bc66_uploader.upload.pattern="{path}\{cmd}" "{build.path}\app_image_bin.cfg" --UART {serial.port.file} -d --reset 
+tools.bc66_uploader.upload.pattern=cmd /C echo [ WAITING ] RESET BOARD TO START FLASHING & cmd /C "{path}\{cmd}" "{build.path}\app_image_bin.cfg" --UART {serial.port.file} -d & cmd /C echo [ READY ] POWER ON BOARD 
+
