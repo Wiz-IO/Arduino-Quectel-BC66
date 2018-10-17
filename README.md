@@ -37,42 +37,27 @@ http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
-TCP Client example log
+MQTT Client example log
 ```
-Leaving the BROM
 [DBG] READY
 [DEV] Quectel EXTENDED API BC66NBR01A04
 [DBG] CPU Frequency: 78000000 Hz
 [ARDUINO] Begin
 [DEV] MSG_ID_RIL_READY
-[APP] Socket Example
-[IMEI] 867997030026503
+[APP] MQTT Simple Example
+[IMEI] 867997030026542
 [BAND] AT+QBAND=1,3, rc = 0
 [RIL] MSG_ID_URC_INDICATION: 2, 1
 [RIL] MSG_ID_URC_INDICATION: 5, 2
 [RIL] MSG_ID_URC_INDICATION: 5, 1
-[APP] Narrow Band Level: -89,
-[APP] DNS wizio.eu = 193.107.36.200
-[SOC] Conecting...
-[SOC] Conected: 0
-HTTP/1.1 200 OK
-Date: Thu, 11 Oct 2018 10:39:18 GMT
-Server: Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.6.26
-X-Powered-By: PHP/5.6.26
-Content-Length: 37
-Content-Type: text/html; charset=UTF-8
-[APACHE] Hello World ( 2018/10/11 )
-[SOC] Close
-[APP] waithing...
-......
-Test Result...
-LTE Narrow Band 3 (1800 MHz)
-LWIP Socket, HTTP-GET
-180 minutes, 180 packets (240 bytes), 1 minute interval
-RX: -95 dBm, 1814.31 MHz 
-TX: +21 dBm, 1723.08 MHz
-PACKET LOST: 0
+[APP] Narrow Band Level: -75,
+[API] Connected
+[API] MQTTConnect( 0 )
+[API] MQTTPublish( 0 )
+[API] MQTTDisconnect()
+[API] Waithing...
 ```
+result is there: http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
 **ATTENTION: Before start exeriments:**
 * Update firmware version
