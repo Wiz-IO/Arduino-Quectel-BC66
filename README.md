@@ -71,7 +71,7 @@ result is there: http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
 * Add json link to Arduino - Preferences 
 
-http://wizio.eu//arduino/bc66/package_wizio.bc66_index.json
+http://wizio.eu/arduino/bc66/package_wizio.bc66_index.json
 
 * Open Borad Manager, Find WizIO, Install OR Update, Select board, Click [Compile] or [Upload]
 
