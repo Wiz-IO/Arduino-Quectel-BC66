@@ -37,6 +37,8 @@ http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
+https://www.youtube.com/watch?v=njaAHkIkIx0&feature=youtu.be
+
 MQTT Client example log
 ```
 [DBG] READY
