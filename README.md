@@ -45,6 +45,9 @@ https://labs.mediatek.com/en/download/rmrArsWL
 
 https://www.youtube.com/watch?v=njaAHkIkIx0&feature=youtu.be
 
+[![Watch the video]](https://youtu.be/njaAHkIkIx0)
+
+
 MQTT Client example log
 ```
 [DBG] READY
