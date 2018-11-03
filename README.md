@@ -43,9 +43,8 @@ https://labs.mediatek.com/en/download/rmrArsWL
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
-https://www.youtube.com/watch?v=njaAHkIkIx0&feature=youtu.be
-
-[![Watch the video]](https://youtu.be/njaAHkIkIx0)
+Video: Simple MQTT Example 
+https://youtu.be/njaAHkIkIx0
 
 
 MQTT Client example log
