@@ -35,6 +35,12 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * MQTT test monitor 
 http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
+* Linux 64 Uploader CODA(next update will add)
+https://labs.mediatek.com/en/download/r7bcGqEW
+* Linux CODA Manual
+https://labs.mediatek.com/en/download/rmrArsWL
+
+
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
 https://www.youtube.com/watch?v=njaAHkIkIx0&feature=youtu.be
