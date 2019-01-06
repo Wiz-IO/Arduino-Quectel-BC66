@@ -35,9 +35,10 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * MQTT test monitor 
 http://quectel.slimfitdesign.com/nb-iot/mqtt/
 
-* Linux 64 Uploader CODA(next update will add)
+* Python Uploader
+https://github.com/Wiz-IO/Mediatek-MT2625-Flash-Utility
+* Linux 64 Uploader CODA(not work with MT2625) 
 https://labs.mediatek.com/en/download/r7bcGqEW
-* Linux CODA Manual
 https://labs.mediatek.com/en/download/rmrArsWL
 
 
