@@ -34,13 +34,8 @@ https://www.arduino.cc/
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 * MQTT test monitor 
 http://quectel.slimfitdesign.com/nb-iot/mqtt/
-
-* Python Uploader
+* Python Uploader(for Linux, MAC ...)
 https://github.com/Wiz-IO/Mediatek-MT2625-Flash-Utility
-* Linux 64 Uploader CODA(not work with MT2625) 
-https://labs.mediatek.com/en/download/r7bcGqEW
-https://labs.mediatek.com/en/download/rmrArsWL
-
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
@@ -116,6 +111,5 @@ Example: Simple MQTT, source from there, folder examples
 
 
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESUP9LCZMZTD6)
-
-# Other - Comming soon....
+>If you want to help / support:   
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESUP9LCZMZTD6)
