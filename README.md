@@ -68,12 +68,14 @@ result is there: http://quectel.slimfitdesign.com/nb-iot/mqtt/
 **ATTENTION: Before start exeriments:**
 * Update firmware version
 * Make Backup of NVDM Fields (module "eeprom")
-* IoT Tool, [Backup] button, check-box "Backup", select file for backup (use IMEI as name), [Start] and keep the file
+* IoT Flash Tool, [Backup] button, check-box "Backup", select file for backup (use IMEI as name), [Start] and keep the file
 * Now you can start all and you can restore the module if need
-* Note: if you upload application to module you lose standart AT command via uarts (with backup file you can restore this)
+* ATTENTION: if you upload application to module you lose standart AT command via uarts
+* Restore AT interface: send "AT+EPORT=1,connl,0", then remove application 
+* [SEE THIS](https://github.com/Wiz-IO/platform-quectel/wiki/Framework-OpenCPU#how-to-restore-at-command-interface)
 
 
-**Install**
+## Install
 
 * Add json link to Arduino - Preferences 
 
