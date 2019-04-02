@@ -1,5 +1,6 @@
 # Arduino for Quectel BC66 LTE Narow Band modules 
- ... and new [Quectel development platform for PlatformIO](https://github.com/Wiz-IO/platform-quectel)
+ ... and [Quectel development platform for PlatformIO](https://github.com/Wiz-IO/platform-quectel) v 2.0.0
+ (must be full Arduino compatible)
 
 **A few words in the beginning**
 * This project not an official product of Quectel / Mediatek
