@@ -13,7 +13,7 @@
 * Added Extended API
 
 Comming soon version 2.0.0
-[SOON](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
+![SOON](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
 
 **Chipset Mediatek MT2625 SoC**
 Ultra-low power, 3GPP Release-14 enabled NB-IoT platform for wide-ranging home, civic, industrial or mobile applications
