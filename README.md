@@ -33,7 +33,10 @@ https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
 Video: Simple MQTT Example 
+
 https://youtu.be/njaAHkIkIx0
+
+https://www.youtube.com/channel/UCNOuJcC5qgU-SrtUwyqmtJQ?view_as=subscriber
 
 **ATTENTION: Before start exeriments:**
 * Update firmware version **BC66NBR01A04 or BC66NBR01A05**
