@@ -63,6 +63,7 @@ http://wizio.eu/arduino/bc66/package_wizio.bc66_index.json
 **Thanks to**
 
 * Radu Igret ( Quectel )
+* [comet.bg](https://www.comet.bg/?cid=92)
 
 
 
