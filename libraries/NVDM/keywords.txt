@@ -1,0 +1,27 @@
+#######################################
+# Syntax Coloring Map For LFlash
+#######################################
+
+#######################################
+# Library (KEYWORD1)
+#######################################
+LFlash	KEYWORD1
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+LFlashDataType      KEYWORD1
+LFlashStatus        KEYWORD1
+LTimerID            KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+write	KEYWORD2
+begin	KEYWORD2
+read    KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

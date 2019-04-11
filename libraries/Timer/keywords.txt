@@ -1,0 +1,28 @@
+#######################################
+# Syntax Coloring Map For LTimer
+#######################################
+
+#######################################
+# Library (KEYWORD1)
+#######################################
+LTimer	KEYWORD1
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+LTimerMode      KEYWORD1
+LTimerStatus    KEYWORD1
+LTimerID        KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+stop	KEYWORD2
+begin	KEYWORD2
+start   KEYWORD2
+end     KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################

@@ -2,5 +2,3 @@
 # https://github.com/Wiz-IO/Arduino-MT2625-BC66/blob/master/README.md
 # the.wizarda@gmail.com
 
-#wizio_BC66.name=WizIO - Quectel IoT Flash Tool
-#wizio_BC66.program.tool=bc66_uploader
