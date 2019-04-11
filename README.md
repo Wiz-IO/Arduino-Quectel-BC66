@@ -6,9 +6,8 @@
 * This project not an official product of Quectel / Mediatek
 * The project is based on Quectel OpenCPU and **reverse engineering**
 * Quectel BC26 should work ( with small modifications maybe, I do not have a module for experiments )
-* This compile version: 1.0.4
-* Coming soon version 2.0.0
-![SOON](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
+* Version 2.0.0
+![IMG](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
 
 **Chipset Mediatek MT2625 SoC**
 Ultra-low power, 3GPP Release-14 enabled NB-IoT platform for wide-ranging home, civic, industrial or mobile applications
