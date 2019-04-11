@@ -3,9 +3,9 @@
  (must be full Arduino compatible)
 
 **A few words in the beginning**
+* **Version 2.0.0** ... beta, not everything tested...
 * This project not an official product of Quectel / Mediatek
 * The project is based on Quectel OpenCPU and **reverse engineering**
-* **Version 2.0.0** ... beta, not everything tested...
 
 ![IMG](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
 
