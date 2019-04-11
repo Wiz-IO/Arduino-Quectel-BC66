@@ -52,7 +52,10 @@ https://youtu.be/njaAHkIkIx0
 
 http://wizio.eu/arduino/bc66/package_wizio.bc66_index.json
 
-* Open Borad Manager, Find WizIO, Install OR Update, Select board, Click [Compile] or [Upload]
+* Open Borad Manager, Find WizIO, Install OR Update (remove old versions)
+* Select Board
+* Select Firmware
+* Click [Compile] or [Upload]
 
 **Thanks to**
 
