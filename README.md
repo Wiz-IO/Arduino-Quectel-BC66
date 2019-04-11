@@ -5,8 +5,8 @@
 **A few words in the beginning**
 * This project not an official product of Quectel / Mediatek
 * The project is based on Quectel OpenCPU and **reverse engineering**
-* Quectel BC26 should work ( with small modifications maybe, I do not have a module for experiments )
 * Version 2.0.0
+
 ![IMG](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
 
 **Chipset Mediatek MT2625 SoC**
@@ -25,7 +25,7 @@ https://www.quectel.com/product/bc66.htm
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino_MT2625_BC66/master/board.jpg)
 
 **Tools**
-* Arduino IDE (Windows for now)
+* Arduino IDE (Windows)
 https://www.arduino.cc/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
@@ -39,31 +39,8 @@ https://github.com/Wiz-IO/Mediatek-MT2625-Flash-Utility
 Video: Simple MQTT Example 
 https://youtu.be/njaAHkIkIx0
 
-
-MQTT Client example log
-```
-[DBG] READY
-[DEV] Quectel EXTENDED API BC66NBR01A04
-[DBG] CPU Frequency: 78000000 Hz
-[ARDUINO] Begin
-[DEV] MSG_ID_RIL_READY
-[APP] MQTT Simple Example
-[IMEI] 867997030026542
-[BAND] AT+QBAND=1,3, rc = 0
-[RIL] MSG_ID_URC_INDICATION: 2, 1
-[RIL] MSG_ID_URC_INDICATION: 5, 2
-[RIL] MSG_ID_URC_INDICATION: 5, 1
-[APP] Narrow Band Level: -75,
-[API] Connected
-[API] MQTTConnect( 0 )
-[API] MQTTPublish( 0 )
-[API] MQTTDisconnect()
-[API] Waithing...
-```
-result is there: http://quectel.slimfitdesign.com/nb-iot/mqtt/ 
-
 **ATTENTION: Before start exeriments:**
-* Update firmware version
+* Update firmware version **BC66NBR01A04 or BC66NBR01A05**
 * Make Backup of NVDM Fields (module "eeprom")
 * IoT Flash Tool, [Backup] button, check-box "Backup", select file for backup (use IMEI as name), [Start] and keep the file
 * Now you can start all and you can restore the module if need
@@ -80,33 +57,9 @@ http://wizio.eu/arduino/bc66/package_wizio.bc66_index.json
 
 * Open Borad Manager, Find WizIO, Install OR Update, Select board, Click [Compile] or [Upload]
 
-
 **Thanks to**
 
-* Radu Igret for terminal uploader
-
-
-TODO:
-* add SPI
-* add I2S
-* add all gpio-s
-* debug and other stufs
-
-
-Arduino + Extended API gives you tremendous opportunities for LTE Narrow Band
-
-The extended API is dependent on firmware version.
-The API support direct calls to the core as FreeRTOS, lvip, mbedtls, http, mqtt...etc.
-API is selected as board model in Arduino Menu - Boards Manager.
-
-Example: Quectel BC66NB-TE-B < R01A04V01 >
-
-This api/board is dependent with firmware BC66NBR01A04V01 and module must be updated with this version.
-API has soft protection of not correct versions.
-
-Example: Simple MQTT, source from there, folder examples
-
-
+* Radu Igret ( Quectel )
 
 
 
