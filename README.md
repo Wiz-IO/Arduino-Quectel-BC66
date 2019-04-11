@@ -20,7 +20,7 @@ https://www.quectel.com/product/bc66.htm
 * Test Board for the project: BC66-TE-B ( it is shield Arduino, unfortunately... )
 * API: OpenCPU, native C, EAT (Embedded AT) oriented
 * User Application Size: ROM (BIN) 200k, RAM 100k
-* **BC66NBR01A04 or BC66NBR01A05**
+* you need firmware **BC66NBR01A04 or BC66NBR01A05**
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino_MT2625_BC66/master/board.jpg)
 
