@@ -47,6 +47,7 @@ https://youtu.be/njaAHkIkIx0
 * ATTENTION: if you upload application to module you lose standart AT command via uarts
 * Restore AT interface: send "AT+EPORT=1,connl,0", then remove application 
 * [SEE THIS](https://github.com/Wiz-IO/platform-quectel/wiki/Framework-OpenCPU#how-to-restore-at-command-interface)
+* [Other examples](https://github.com/Wiz-IO/platformio-quectel-examples)
 
 
 ## Install
