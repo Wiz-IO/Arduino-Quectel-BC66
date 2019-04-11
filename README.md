@@ -18,9 +18,9 @@ https://www.mediatek.com/products/nbIot/mt2625
 is a high-performance, multi-band NB-IoT module...
 https://www.quectel.com/product/bc66.htm
 * Test Board for the project: BC66-TE-B ( it is shield Arduino, unfortunately... )
-* Modules BC66NA... is obsolete, replace with BC66NB... and firmware for NB
 * API: OpenCPU, native C, EAT (Embedded AT) oriented
 * User Application Size: ROM (BIN) 200k, RAM 100k
+* **BC66NBR01A04 or BC66NBR01A05**
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino_MT2625_BC66/master/board.jpg)
 
@@ -29,10 +29,6 @@ https://www.quectel.com/product/bc66.htm
 https://www.arduino.cc/
 * Firmware, USB Drivers, Quectel IoT Flash Tool
 https://app.box.com/s/3wrkh1yzn09yuyb5f8v5vllmlir0571s
-* MQTT test monitor 
-http://quectel.slimfitdesign.com/nb-iot/mqtt/
-* Python Uploader(for Linux, MAC ...)
-https://github.com/Wiz-IO/Mediatek-MT2625-Flash-Utility
 
 ![ScreenShot](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/arduino.png)
 
