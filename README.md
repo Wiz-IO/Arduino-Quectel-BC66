@@ -7,7 +7,7 @@
 * This project not an official product of Quectel / Mediatek
 * The project is based on Quectel OpenCPU and **reverse engineering**
 
-**work only with firmwares BC66NBR01A04 or BC66NBR01A05**
+**ATT: work only with firmwares BC66NBR01A04 or BC66NBR01A05**
 
 ![IMG](https://raw.githubusercontent.com/Wiz-IO/Arduino-Quectel-BC66/master/images/ARDUINO_BC66.png)
 
